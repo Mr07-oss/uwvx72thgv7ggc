@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+   
+   <style>
+       
+h2 {
+       
+           text-align: center;
+          
+           font-family: chibi.TTF;
+    font-size: 100px;
+    
+      
+       }
+       
+       .container {
+           width: 500px;
+           margin: auto;
+       }
+       
+       .switch {
+           width: 250px;
+           margin: auto;
+           height: 125px;
+           background: #e5e5e5;
+           cursor: pointer;
+           border-radius: 100px;
+           position: relative;
+           z-index: 0;
+       }
+       
+       .switch:before{
+           content: '';
+           position: absolute;
+           left: 5px;
+           top: 5px;
+           width: 240px;
+           background: #fff;
+           z-index: 1;
+           border-radius: 95px;
+       }
+       
+       
+       .switch:after{
+           content: '';
+           width: 110px;
+           height: 110px;
+           border-radius: 50%;
+           z-index: 2;
+           background: #fff;
+           position: absolute;
+           transition-duration: 500ms;
+           top: 7px;
+           left: 8px;
+           box-shadow: 0 2px 5px #999;
+           
+       }
+       
+       .switchOn, .switchOn:before {
+           background: #4cd964;
+       }
+       .switchOn:after {
+           left: 138px;
+       }
+       
+      
+
+       
+       
+       
+       
+       body {
+    padding: 25px;
+    background-color: white;
+    color: white;
+    font-size: 25px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+    
+
+       
+       
+       
+       
+    </style>
+   
+    <meta charset="UTF-8">
+    <title>lop yu</title>
+</head>
+<body>
+   <div class="container">
+    <h2>Ai Mis Yu</h2>
+ <div class="switch" onclick="myFunction()"></div>
+    </div>
+    
+    
+    <script src="jquery.js"></script>
+    
+    <script>
+    
+        $(document).ready(function(){
+            $(".switch").click(function(){
+                $(this).toggleClass("switchOn");
+            })
+        })
+    </script>
+    
+    
+<script>
+        function myFunction() {
+            var element = document.body;
+            
+        element.classList.toggle("dark-mode");
+        
+        }
+    </script>
+    
+    
+</body>
+</html>
